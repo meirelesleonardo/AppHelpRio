@@ -14,7 +14,7 @@ from django.urls import reverse
 def index(request):
     context = {'segment': 'index'}
 
-    html_template = loader.get_template('home/settings.html')
+    html_template = loader.get_template('home/litagemDeLaudos.html')
     return HttpResponse(html_template.render(context, request))
 
 

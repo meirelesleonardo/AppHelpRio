@@ -1,6 +1,6 @@
 {% extends "layouts/base.html" %}
 
-{% block title %} Transactions {% endblock %} 
+{% block title %} Laudos {% endblock %} 
 
 <!-- Specific Page CSS goes HERE  -->
 {% block stylesheets %}{% endblock stylesheets %}
@@ -17,22 +17,22 @@
                           <svg class="icon icon-xxs" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
                       </a>
                   </li>
-                  <li class="breadcrumb-item"><a href="#">Volt</a></li>
-                  <li class="breadcrumb-item active" aria-current="page">Transactions</li>
+                  <li class="breadcrumb-item"><a href="#">Imóveis</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Laudos</li>
               </ol>
           </nav>
-          <h2 class="h4">All Orders</h2>
-          <p class="mb-0">Your web analytics dashboard template.</p>
+          <h2 class="h4">Imóveis Cadastrados</h2>
+          <p class="mb-0">Selecione o imóvel para ver a ficha cadastrada</p>
       </div>
       <div class="btn-toolbar mb-2 mb-md-0">
           <a href="#" class="btn btn-sm btn-gray-800 d-inline-flex align-items-center">
               <svg class="icon icon-xs me-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
-              New Plan
+              Novo Cadastro
           </a>
-          <div class="btn-group ms-2 ms-lg-3">
+          <!-- div class="btn-group ms-2 ms-lg-3">
               <button type="button" class="btn btn-sm btn-outline-gray-600">Share</button>
               <button type="button" class="btn btn-sm btn-outline-gray-600">Export</button>
-          </div>
+          </div -->
       </div>
   </div>
   
@@ -55,10 +55,10 @@
                       <span class="visually-hidden">Toggle Dropdown</span>
                   </button>
                   <div class="dropdown-menu dropdown-menu-xs dropdown-menu-end pb-0">
-                      <span class="small ps-3 fw-bold text-dark">Show</span>
-                      <a class="dropdown-item d-flex align-items-center fw-bold" href="#">10 <svg class="icon icon-xxs ms-auto" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg></a>
-                      <a class="dropdown-item fw-bold" href="#">20</a>
-                      <a class="dropdown-item fw-bold rounded-bottom" href="#">30</a>
+                      <span class="small ps-3 fw-bold text-dark">Mostrar</span>
+                      <a class="dropdown-item d-flex align-items-center fw-bold" href="#">25<svg class="icon icon-xxs ms-auto" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg></a>
+                      <a class="dropdown-item fw-bold" href="#">50</a>
+                      <a class="dropdown-item fw-bold rounded-bottom" href="#">100</a>
                   </div>
               </div>
           </div>
@@ -69,13 +69,13 @@
       <table class="table table-hover">
           <thead>
               <tr>
-                  <th class="border-gray-200">#</th>
-                  <th class="border-gray-200">Bill For</th>						
-                  <th class="border-gray-200">Issue Date</th>
-                  <th class="border-gray-200">Due Date</th>
-                  <th class="border-gray-200">Total</th>
+                  <th class="border-gray-200">CÓDIGO UN</th>
+                  <th class="border-gray-200">Autor do Cadastro</th>						
+                  <th class="border-gray-200">Atualizado Por</th>
+                  <th class="border-gray-200">Data da Atualização</th>
+                  <th class="border-gray-200">Valor do Imóvel</th>
                   <th class="border-gray-200">Status</th>
-                  <th class="border-gray-200">Action</th>
+                  <th class="border-gray-200">Condomínio</th>
               </tr>
           </thead>
           <tbody>
@@ -87,17 +87,17 @@
                       </a>
                   </td>
                   <td>
-                      <span class="fw-normal">Platinum Subscription Plan</span>
+                      <span class="fw-normal">Meireles</span>
                   </td>
-                  <td><span class="fw-normal">1 May 2020</span></td>                        
-                  <td><span class="fw-normal">1 Jun 2020</span></td>
+                  <td><span class="fw-normal">Meireles</span></td>                        
+                  <td><span class="fw-normal">30 jan 2022</span></td>
                   <td><span class="fw-bold">$799,00</span></td>
-                  <td><span class="fw-bold text-warning">Due</span></td>
+                  <td><span class="fw-bold text-warning">A Venda</span></td>
                   <td>
                       <div class="btn-group">
                           <button class="btn btn-link text-dark dropdown-toggle dropdown-toggle-split m-0 p-0" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                               <span class="icon icon-sm">
-                                  <span class="fas fa-ellipsis-h icon-dark"></span>
+                                  <span class="fas fa-ellipsis-h icon-dark">Torre da barra</span>
                               </span>
                               <span class="visually-hidden">Toggle Dropdown</span>
                           </button>
