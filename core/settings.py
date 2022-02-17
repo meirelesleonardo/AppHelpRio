@@ -42,7 +42,8 @@ INSTALLED_APPS = [
         # local apps
     "users.apps.UsersConfig",
     'apps.home',
-    'apps.fich_imovel',
+    'apps.ficha_imovel',
+    'apps.instituicao',
 ]
 
 MIDDLEWARE = [
