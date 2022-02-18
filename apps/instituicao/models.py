@@ -14,4 +14,7 @@ class Instituicao(models.Model):
     Dominio = models.CharField(max_length=1000, blank=True, null=True)
     DataCadastro = models.DateTimeField(auto_now_add=True)
     Ativo = models.BooleanField(default=True)
-    ficha_instituicao = models.BooleanField(default=True)
+    ficha_instituicao = models.BooleanField(default=True)    
+
+    def __str__(self):
+        return self.NomeFantasia

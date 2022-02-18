@@ -72,13 +72,13 @@
     <div class="row">
         <div class="col-12 col-xl-8">
             <div class="card card-body border-0 shadow mb-4">
-                <h2 class="h5 mb-4">General information</h2>
+                <h2 class="h5 mb-4">Informação Gerall</h2>
                 <form>
                     <div class="row">
                         <div class="col-md-6 mb-3">
                             <div>
-                                <label for="first_name">First Name</label>
-                                <input class="form-control" id="first_name" type="text" placeholder="Enter your first name" required>
+                                <label for="first_name">Primeiro Nome</label>
+                                <input class="form-control" id="first_name" type="text" placeholder="Seu primeiro nome" required>
                             </div>
                         </div>
                         <div class="col-md-6 mb-3">
@@ -262,7 +262,7 @@
                         <div class="card-body pb-5">
                             <img src="/static/assets/img/team/profile-picture-1.jpg" class="avatar-xl rounded-circle mx-auto mt-n7 mb-4" alt="Neil Portrait">
                             <h4 class="h3">
-                                Neil Sims
+                                {{ request.user.first_name }} {{ request.user.last_name }}
                             </h4>
                             <h5 class="fw-normal">
                                 {{ request.user.username }}
