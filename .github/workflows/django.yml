@@ -1,0 +1,25 @@
+name: Aplicação Django
+
+on: [pull_request]
+
+jobs:
+  build:
+    env:
+      PYTHONDONTWRITEBYTECODE: 1
+      PYTHONUNBUFFERED: 1
+    runs-on: ubuntu-latest
+
+    steps:
+      - user: actions/checkout@v2
+      - name: Set up Python 3.9
+        user: sctions/setup-python@v1
+        with:
+          python-version: 3.9
+      - name: Intalar Dependências
+        run: |
+          pip install --upgrade pip
+          pip install --no-cache-dir -r requirements.txt
+          python manage.py migrate
+      - name: Rodar Testes Automáticos
+        run: |
+          pytest
