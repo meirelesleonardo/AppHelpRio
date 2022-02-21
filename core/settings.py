@@ -22,7 +22,7 @@ CORE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = config('SECRET_KEY', default='S#perSdeVe!ser-Troc@d@')
+SECRET_KEY = config('SECRET_KEY', default='Meireles-S#perSdeVe!ser-Troc@d@')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', default=True, cast=bool)
@@ -58,7 +58,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'core.urls'
 LOGIN_REDIRECT_URL = "home"
-LOGOUT_REDIRECT_URL = "home"
+LOGOUT_REDIRECT_URL = "home:home"
 TEMPLATE_DIR = os.path.join(CORE_DIR, "apps/templates")  # ROOT dir for templates
 
 TEMPLATES = [
@@ -126,7 +126,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 STATIC_ROOT = os.path.join(CORE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
-STATICFILES_DIRS=1
+#STATICFILES_DIRS = 1
 
 # Extra places for collectstatic to find static files.
 STATICFILES_DIRS = (
@@ -140,3 +140,7 @@ STATICFILES_DIRS = (
 
 # User Model
 AUTH_USER_MODEL = "users.User"
+
+# Sessão
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True
+SESSION_COOKIE_AGE = 7200 # 2 horas * 60 minutos * 60 segundos

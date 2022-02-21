@@ -3,7 +3,7 @@ from django.db import models
 from apps.instituicao.models import Instituicao
 
 class User(AbstractUser):
-    InstituicaoFk = models.ForeignKey(Instituicao, on_delete=models.CASCADE, null=True, blank=True)
+    Instituicao = models.ForeignKey(Instituicao, on_delete=models.CASCADE, null=True, blank=True)
     
     def __str__(self):
         return self.first_name

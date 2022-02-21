@@ -1,11 +1,11 @@
 # -*- encoding: utf-8 -*-
 """
-Copyright (c) 2019 - present AppSeed.us
+HelpRio 2022 - meirelesleonardo.ti@gmail.com
 """
 
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
-from django.contrib.auth.models import User
+from users.models import User
 
 
 class LoginForm(forms.Form):
