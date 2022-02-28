@@ -4,9 +4,13 @@ Copyright (c) 2019 - present AppSeed.us
 """
 
 # Create your views here.
+from __future__ import print_function
+import email
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
+
+from apps.instituicao.models import Instituicao
 from .forms import LoginForm, SignUpForm
 
 
@@ -37,21 +41,28 @@ def register_user(request):
     success = False
 
     if request.method == "POST":
+        #data = {'Instituicao':['2']}
+        
         form = SignUpForm(request.POST)
+               
         if form.is_valid():
-            form.save()
+            novoUsuario = form.save(commit=False)           
+            novoUsuario.Instituicao = request.user.Instituicao    
+            novoUsuario.save()
             username = form.cleaned_data.get("username")
             raw_password = form.cleaned_data.get("password1")
             user = authenticate(username=username, password=raw_password)
 
-            msg = 'Usuário criado com sucesso - <a href="/login">login</a>.'
+            msg = 'Usuário criado com sucesso - <a href="/login/">login</a>.'
             success = True
 
-            return redirect("/login/")
+            #return redirect("/login")
 
         else:
             msg = 'Form is not valid'
     else:
-        form = SignUpForm()
+        data = {'Instituicao':request.user.Instituicao}
+        form = SignUpForm(data)       
+      
 
     return render(request, "accounts/register.html", {"form": form, "msg": msg, "success": success})
