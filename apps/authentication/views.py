@@ -41,8 +41,7 @@ def register_user(request):
     success = False
 
     if request.method == "POST":
-        #data = {'Instituicao':['2']}
-        
+                
         form = SignUpForm(request.POST)
                
         if form.is_valid():

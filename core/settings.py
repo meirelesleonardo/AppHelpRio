@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'apps.home',
     'apps.ficha_imovel',
     'apps.instituicao',
+    'apps.models',
 ]
 
 MIDDLEWARE = [
