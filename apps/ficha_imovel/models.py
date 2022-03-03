@@ -2,6 +2,7 @@ from operator import mod
 from django.db import models
 from django.urls import clear_url_caches
 from apps.instituicao.models import Instituicao
+from apps.models.BaseModels import CreatedBy, TimeStampedModel, UuidModel
 from users.models import User
 
 
@@ -56,7 +57,7 @@ class FichaImovel(models.Model):
 
     FichaImovelId = models.AutoField(primary_key=True)
     CodigoUnico = models.CharField('CÓDIGO UN.',max_length=100, blank=True, null=True)
-    DataCadastro = models.DateTimeField('Data do laudo',auto_now_add=True)
+    
     CantoDePedra = models.BooleanField('Canto de Pedra',default=False)
     MotivoCantoDePedra = models.CharField('Motivo Canto de Pedra',max_length=300, blank=True, null=True)
 
@@ -118,13 +119,23 @@ class FichaImovel(models.Model):
     DataAtualizacao = models.DateTimeField('Data Atualização',auto_now=True)
     AtualizacaoObs = models.CharField('Atualização Obs.',max_length=20000, blank=True, null=True)
     
-    Proprietario = models.ForeignKey(Proprietario, on_delete=models.CASCADE, blank=True, null=True)
     DataUltimaModificacao = models.DateTimeField(auto_now=True)
-    Instituicao = models.ForeignKey(Instituicao, on_delete=models.CASCADE)
-    Condominio = models.ForeignKey(Condominio, on_delete=models.CASCADE, null=True, blank=True)
-    
-
 
     def __str__(self):
         return self.CodigoUnico
 
+class Laudo(
+    UuidModel,
+    TimeStampedModel,
+    CreatedBy,
+    Condominio,
+    Proprietario,
+    FichaImovel,
+    Instituicao
+    ):
+
+    LaudoId = models.AutoField(primary_key=True)
+    DataCadastroLaudo = models.DateTimeField('Data do laudo',auto_now_add=True)
+
+    def __str__(self):
+        return self.LaudoId
