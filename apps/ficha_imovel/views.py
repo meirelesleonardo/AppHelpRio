@@ -1,3 +1,5 @@
+from django.template import loader
+from django.http import HttpResponse
 from django.shortcuts import render
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
@@ -5,6 +7,12 @@ from .forms import CriarLaudo
 
 
 # Create your views here.
+@login_required(login_url="/login/")
+def listar(request):
+    context = {'segment': 'ficha_imovel'}
+
+    html_template = loader.get_template('ficha_imovel/lista.html')
+    return HttpResponse(html_template.render(context, request))
 
 @login_required(login_url="/login/")
 def criar(request):
@@ -39,3 +47,10 @@ def criar(request):
       
 
     return render(request, "ficha_imovel/criar.html", context=context)
+
+@login_required(login_url="/login/")
+def laudo(request):
+    context = {'segment': 'ficha_imovel'}
+
+    html_template = loader.get_template('ficha_imovel/laudo.html')
+    return HttpResponse(html_template.render(context, request))

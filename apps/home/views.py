@@ -12,9 +12,9 @@ from django.urls import reverse
 
 @login_required(login_url="/login/")
 def index(request):
-    context = {'segment': 'index'}
+    context = {'segment': 'ficha_imovel'}
 
-    html_template = loader.get_template('home/litagemDeLaudos.html')
+    html_template = loader.get_template('ficha_imovel/lista.html')
     return HttpResponse(html_template.render(context, request))
 
 
