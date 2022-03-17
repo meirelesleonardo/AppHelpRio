@@ -17,84 +17,88 @@
 
     
     <div class="container-fluid">                           
-        <div class="card card-body border-0 shadow mb-4">
-            <div class="row">
+        <div class="card card-body border-0 shadow mb-4">            
+            <div class="row justify-content-between">
                 <div class="col-md-2 mb-0">
                     <label>CÓDIGO UN.</label>
-                    <label class="row justify-content-center form-control">{{ request.user.first_name }}</label>  
+                    <label class="form-control">{{ request.user.first_name }}</label>  
                 </div> 
-                <div class="col-md-10 mb-0"><h2 class="h2 mb-5 row justify-content-center">Ficha de Imóveis</h2></div>  
-                <div class="row">
-                
-                    <div class="col-md-2 mb-1">
-                        <div>
-                            <label for="first_name">Primeiro Nome</label>                                
-                            <label class="form-control">{{ request.user.first_name }}</label>
-                        </div>
-                    </div>
-                    
-                    <div class="col-md-10 mb-1">
-                        <div>
-                            <label for="last_name">Sobre Nome</label>
-                            <input class="form-control" id="last_name" type="text" Value="{{ request.user.last_name }}"  placeholder="Seu sobre nome" required>
-                        </div>
-                    </div>
-                    
+                <div class="col-md-10 mb-3">
+                    <h2 class="h2 mb-5 row justify-content-center">Ficha de Imóveis</h2>
+                </div>  
+            </div>
+            
+            <div class="row mb-3 justify-content-center">                
+                <div class="col-sm-auto">         
+                        <label class="py-2">Canto de Pedra: </label>                                      
                 </div>
-            </div> 
-            
-            
-            <div class="col-md-12 mb-1">
-                <div class="row">
-                    <div>
-                        <label for="first_name">Primeiro Nome</label>                                
+                <div class="col-sm-auto">
+                    <label class="form-control">Sim</label>   
+                </div> 
+                                  
+                <div class="col-sm-auto offset-sm-8 row justify-content-md-end">                    
+                        <label class="h6">Data: </label>                
+                </div> 
+                <div class="col-sm-auto">
+                    <label class="h6">16/03/2021</label>
+                </div>                                              
+            </div>
+            <div class="row mb-3">
+                <div class="col-sm-4 mb-3">
+                    <div id="linha">
+                        conteudo da div
+                    </div>
+                </div>
+            </div>                
+            <div class="row">            
+                <div class="col-sm-1 mb-1">                   
+                        <label class="py-2">Tipo:</label>
+                </div>
+                <div class="col-sm-4 mb-1">
+                    <label class="form-control">{{ request.user.first_name }}</label>
+                </div>
+                <div class="col-sm-1 mb-1 offset-sm-1">
+                        <label class="py-2">Bairro:</label>  
+                </div>
+                <div class="col-sm-4 mb-1">
+                    <label class="form-control">{{ request.user.first_name }}</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-1 mb-1">
+                        <label class="py-2">Endereço:</label>    
+                </div>
+                <div class="col-md-10 mb-1">
+                    <div>                             
                         <label class="form-control">{{ request.user.first_name }}</label>
                     </div>
-                    <div class="col-md-2 mb-1">
-                        <div>
-                            <label for="first_name">Primeiro Nome</label>                                
-                            <label class="form-control">{{ request.user.first_name }}</label>
-                        </div>
+                </div>
+            </div>
+                <div class="col-md-2 mb-1">
+                    <div>
+                        <label>Primeiro Nome</label>                                
+                        <label class="form-control">{{ request.user.first_name }}</label>
                     </div>
-                    <div class="col-md-2 mb-1">
-                        <div>
-                            <label>Primeiro Nome</label>                                
-                            <label class="form-control">{{ request.user.first_name }}</label>
-                        </div>
-                    </div>
-                    <div class="col-md-2 mb-1">
-                        <div>
-                            <label>Primeiro Nome</label>                                
-                            <label class="form-control">{{ request.user.first_name }}</label>
-                        </div>
-                    </div>
-                    <div class="col-md-2 mb-1">
-                        <div>
-                            <label>Primeiro Nome</label>                                
-                            <label class="form-control">{{ request.user.first_name }}</label>
-                        </div>
-                    </div>
-                    <div class="col-md-2 mb-1">
-                        <div>
-                            <label>Primeiro Nome</label>                                
-                            <label class="form-control">{{ request.user.first_name }}</label>
-                        </div>
-                    </div>
+                </div>
 
-                    
+            
                 <div class="col-md-2 mb-1">
                     <div>
                         <label for="first_name">Primeiro Nome</label>                                
                         <label class="form-control">{{ request.user.first_name }}</label>
                     </div>
                 </div>
-            </div>
+            
 
 
         </div>
-        </div>  
-        
-        
+    </div>  
+    
+    <div class="row mx-n1">
+        <div class="col border px-5 ">Padding de coluna customizado.</div>
+        <div class="col py-3  border bg-light">Padding de coluna customizado.</div>
+        </div>
+    
     
         
        

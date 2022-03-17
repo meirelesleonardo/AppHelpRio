@@ -15,6 +15,10 @@
 
 */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
+#linha {
+  width: 100%;
+  border-bottom: 1px solid #D1D5DB;
+}
 .datepicker {
   display: none; }
   .datepicker.active {
@@ -1617,6 +1621,14 @@ progress {
   .col-sm-12 {
     flex: 0 0 auto;
     width: 100%; }
+  .col-sm-1-1 {
+    flex: 0 0 auto;
+    width: 6%;
+  }
+  .col-sm-2-1 {
+    flex: 0 0 auto;
+    width: 10%;
+  }
   .offset-sm-0 {
     margin-left: 0; }
   .offset-sm-1 {
