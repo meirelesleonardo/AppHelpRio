@@ -23,6 +23,5 @@ venv
 package-lock.json
 .vscode/symbols.json
 
-
-
-
+.gitignore
+db.sqlite3
