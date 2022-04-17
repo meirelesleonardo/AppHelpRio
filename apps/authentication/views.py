@@ -12,8 +12,9 @@ from django.contrib.auth.decorators import login_required
 
 from apps.instituicao.models import Instituicao
 from .forms import LoginForm, SignUpForm
+from django.views.decorators.csrf import csrf_exempt
 
-
+@csrf_exempt
 def login_view(request):
     form = LoginForm(request.POST or None)
 
