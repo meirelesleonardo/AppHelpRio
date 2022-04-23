@@ -22,8 +22,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 #USER suporte
 COPY . .
 # running migrations
-# RUN python manage.py migrate
-
+RUN python manage.py migrate
+RUN python manage.py collectstatic --noinput
 
 # gunicorn
 CMD gunicorn core.wsgi:application --bind 0.0.0.0:$PORT
