@@ -8,8 +8,8 @@ app_name = 'ficha_imovel'
 urlpatterns = [
 
     # The home page
-    path('fichaImovel/criar', views.criar, name='criar'),  
-    path('fichaImovel/lista', views.listar, name='lista'), 
-    path('fichaImovel/laudo', views.laudo, name='laudo'),
+    path('criar/', views.criar, name='criar'),  
+    path('lista/', views.listar, name='lista'), 
+    path('laudo/', views.laudo, name='laudo'),
 
 ]

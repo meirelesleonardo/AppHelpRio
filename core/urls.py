@@ -18,8 +18,8 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("", include("apps.authentication.urls")), # Auth routes - login / register 
-    path("", include("users.urls")), 
-    path("", include("apps.ficha_imovel.urls")), 
+    path("usuario/", include("users.urls")),
+    path("fichaImovel/", include("apps.ficha_imovel.urls")), 
+    path("", include("apps.authentication.urls")), # Auth routes - login / register        
     path("", include("apps.home.urls")),             # UI Kits Html files
 ]
